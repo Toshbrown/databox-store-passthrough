@@ -42,11 +42,13 @@ app = express!
 
     console.log "Host: #{req.headers.host}, IP: #{req.ip}"
 
-    mcrn = macaroons.MacaroonsBuilder.deserialize req.body.macaroon
+    console.log "Macaroon:" req.body.macaroon
 
-    console.log "Macaroon:" mcrn
+    macaroon = macaroons.MacaroonsBuilder.deserialize req.body.macaroon
 
-    verifier = new macaroons.MacaroonsVerifier mcrn
+    console.log "Macaroon:" macaroon.inspect!
+
+    verifier = new macaroons.MacaroonsVerifier macaroon
       ..satisfy-exact "target = #DRIVER_HOSTNAME.store"
       # TODO: Verify expiry and permissions here
 
