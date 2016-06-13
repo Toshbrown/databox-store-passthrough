@@ -1,0 +1,31 @@
+{
+	"manifest-version": 1,
+
+	"name": "databox-store-passthrough",
+	"version": "0.1.0",
+
+	"description": "A debug Databox store that simply forwards any requests to a specified driver",
+	"author": "Yousef Amar <yousef@amar.io> (http://yousefamar.com/)",
+	"license": "MIT",
+
+	"tags": [
+		"store",
+		"passthrough",
+		"native",
+		"debug"
+	],
+
+	"homepage": "https://github.com/me-box/databox-store-passthrough",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/me-box/databox-store-passthrough.git"
+	},
+
+	"network-permissions": [
+	],
+	"hardware-permissions": [
+	],
+
+	"resource-requirements": {
+	}
+}

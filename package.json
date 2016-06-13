@@ -1,0 +1,35 @@
+{
+  "name": "databox-store-passthrough",
+  "version": "0.1.0",
+  "description": "A debug Databox store that simply forwards any requests to a specified driver",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lsc main.ls",
+    "release": "docker build -t databox-store-passthrough . && docker tag databox-store-passthrough amar.io:5000/databox-store-passthrough && docker push amar.io:5000/databox-store-passthrough"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/me-box/databox-store-passthrough.git"
+  },
+  "keywords": [
+    "docker",
+    "databox",
+    "personal",
+    "data",
+    "store",
+    "passthrough"
+  ],
+  "author": "Yousef Amar <yousef@amar.io> (http://yousefamar.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/me-box/databox-store-passthrough/issues"
+  },
+  "homepage": "https://github.com/me-box/databox-store-passthrough#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4",
+    "livescript": "^1.4.0",
+    "macaroons.js": "^0.3.6",
+    "request": "^2.72.0"
+  }
+}
