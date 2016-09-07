@@ -1,4 +1,10 @@
-require! { express, 'body-parser', request, 'macaroons.js' }
+require! {
+  express
+  'body-parser'
+  request
+  'macaroons.js'
+  'path-to-regexp'
+}
 
 const ARBITER_TOKEN   = process.env.ARBITER_TOKEN
 const HOSTNAME = process.env.HOSTNAME
@@ -70,7 +76,7 @@ app = express!
           |> (.trim!)
           # TODO: Catch potential JSON.parse exception
           |> JSON.parse
-          |> path-to-regex
+          |> path-to-regexp
           |> (.test path)
 
     (req, res, next) !->
