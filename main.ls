@@ -8,7 +8,7 @@ require! {
 
 const ARBITER_TOKEN   = process.env.ARBITER_TOKEN
 const HOSTNAME = process.env.HOSTNAME
-const DRIVER_HOSTNAME = process.env.DRIVER_HOSTNAME
+const DRIVER_HOSTNAME = process.env.DATABOX_DRIVER_MOBILE_ENDPOINT
 const PORT = process.env.PORT or 8080
 
 unless ARBITER_TOKEN?
