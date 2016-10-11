@@ -6,9 +6,10 @@ require! {
   'path-to-regexp'
 }
 
+const DATABOX_ARBITER_ENDPOINT = process.env.DATABOX_ARBITER_ENDPOINT
 const ARBITER_TOKEN   = process.env.ARBITER_TOKEN
 const HOSTNAME = process.env.HOSTNAME
-const DRIVER_HOSTNAME = process.env.DATABOX_DRIVER_MOBILE_ENDPOINT
+const DRIVER_HOSTNAME = 'databox-driver-mobile'
 const PORT = process.env.PORT or 8080
 
 unless ARBITER_TOKEN?
@@ -22,7 +23,7 @@ unless DRIVER_HOSTNAME?
 
 # Register with arbiter and get secret
 err, res, secret <-! request.post do
-  url: 'http://arbiter:8080/register'
+  url: DATABOX_ARBITER_ENDPOINT+'register'
   form: token: ARBITER_TOKEN
 
 if err? then throw err

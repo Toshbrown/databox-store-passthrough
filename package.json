@@ -5,7 +5,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "lsc main.ls",
-    "release": "docker build -t databox-store-passthrough . && docker tag databox-store-passthrough amar.io:5000/databox-store-passthrough && docker push amar.io:5000/databox-store-passthrough"
+    "build": "docker build -t databox/databox-store-passthrough .",
+    "deploy": "docker tag databox/databox-store-passthrough registry.upintheclouds.org/databox-store-passthrough && docker push registry.upintheclouds.org/databox-store-passthrough",
+    "clean": "node ./node_modules/modclean/bin/modclean.js -p ./node_modules/ -r",
+    "getshell": "docker exec -i -t databox-store-passthrough /bin/bash",
+    "kill": "docker kill databox-store-passthrough",
+    "attach": "docker attach databox-store-passthrough",
+    "shell": "docker run -i -t databox/databox-store-passthrough /bin/bash",
+    "local": "docker run -i -t databox/databox-store-passthrough"
   },
   "repository": {
     "type": "git",
