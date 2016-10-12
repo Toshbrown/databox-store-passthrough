@@ -8,7 +8,7 @@ require! {
 
 const DATABOX_ARBITER_ENDPOINT = process.env.DATABOX_ARBITER_ENDPOINT
 const ARBITER_TOKEN   = process.env.ARBITER_TOKEN
-const HOSTNAME = process.env.HOSTNAME
+const HOSTNAME = 'databox-store-passthrough'
 const DRIVER_HOSTNAME = 'databox-driver-mobile'
 const PORT = process.env.PORT or 8080
 
