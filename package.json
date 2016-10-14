@@ -7,6 +7,8 @@
     "start": "lsc main.ls",
     "build": "docker build -t databox/databox-store-passthrough .",
     "deploy": "docker tag databox/databox-store-passthrough registry.upintheclouds.org/databox-store-passthrough && docker push registry.upintheclouds.org/databox-store-passthrough",
+    "build-arm": "docker build -f Dockerfile-arm -t databox/databox-store-passthrough-arm .",
+    "deploy-arm": "docker tag databox/databox-store-passthrough-arm registry.upintheclouds.org/databox-store-passthrough-arm && docker push registry.upintheclouds.org/databox-store-passthrough-arm",
     "clean": "node ./node_modules/modclean/bin/modclean.js -p ./node_modules/ -r",
     "getshell": "docker exec -i -t databox-store-passthrough /bin/bash",
     "kill": "docker kill databox-store-passthrough",
@@ -39,6 +41,7 @@
     "livescript": "^1.4.0",
     "macaroons.js": "^0.3.6",
     "path-to-regexp": "^1.5.3",
-    "request": "^2.72.0"
+    "request": "^2.72.0",
+    "modclean":""
   }
 }
