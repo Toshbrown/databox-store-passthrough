@@ -8,6 +8,8 @@
 	"author": "Yousef Amar <yousef@amar.io> (http://yousefamar.com/)",
 	"license": "MIT",
 
+	"databox-type":"store",
+
 	"tags": [
 		"store",
 		"passthrough",
